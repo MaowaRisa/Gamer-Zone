@@ -135,6 +135,9 @@ nav li a{
     display: flex;
     gap: 25px;
 }
+.banner-img img{
+    width: 90%;
+}
 .about-us-container{
     background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
 }
@@ -150,6 +153,9 @@ nav li a{
     max-width: 520px;
     margin: 30px 0;
 }
+.about-us-img img{
+    width: 90%;
+}
 .our-purpose{
     color: #534C64;
     font-size: 2rem;
@@ -160,4 +166,38 @@ nav li a{
     color: #534C64;
     font-size: 1.5rem;
     font-weight: 500;
+}
+@media screen and (max-width: 576px) {
+    .header-logo-container, 
+    .nav-normal, 
+    nav > ul,
+    .about-us{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .banner-container{
+        background: url('../images/banner-back.svg'), url('../images/banner-back.svg');
+        background-repeat: no-repeat;
+        background-position: 35px bottom, 60px bottom ;
+        background-size: 75%;
+        text-align: center;
+    }
+    .about-us-container{
+        text-align: center;
+        padding: 0 10px;
+    }
+    .about-us-content{
+        text-align: center;
+    }
+    
+}
+@media screen and (min-width: 576px) and (max-width: 960px) {
+    
 }
