@@ -282,16 +282,111 @@ nav li a{
     max-width: 500px;
     margin-top: 24px;
 }
+.careers-container{
+    background: linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%);
+    color: #FFF;
+}
+.career-info{
+    display: flex;
+    align-items: center;
+}
+.career-title{
+    font-size: var(--upper-medium-font);
+    font-weight: 700;
+}
+.career-description{
+    font-size: var(--medium-font);
+    max-width: 680px;
+    margin: 24px 0;
+}
+.career-lists{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding-right: 5px;
+}
+.position{
+    text-align: left;
+}
+.location{
+    text-align: right;
+}
+.career-img > img{
+    width: 100%;
+}
+.games-container{
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+}
+.game-card-details{
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    padding: 120px 0;
+}
+.game-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    background: #FFF;
+    min-width: 243px;
+    padding: 10px 20px;
+}
+.game-card:hover{
+    border: 2px solid #FF42A5;
+    background: linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+footer{
+    background-color: #000223;
+    color: #fff;
+    padding: 120px 0;
+}
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    justify-content: center;
+}
+.footer-top-nav a{
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+}
+.footer-social-nav i{
+    font-size: 3.5rem;
+    color: #fff;
+    margin-right: 1rem;
+}
+.footer-bottom-nav a{
+    color: rgba(255, 255, 255, 0.60);
+}
+small{
+    color: rgba(255, 255, 255, 0.60);
+    text-align: center;
+    font-weight: 500;
+    max-width: 250px;
+}
 @media screen and (max-width: 576px) {
+
     .header-logo-container, 
     .nav-normal, 
     nav > ul,
     .about-us,
     .videos,
-    .game-info-container{
+    .game-info-container,
+    .career-info{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .career-description{
+        max-width: 550px;
     }
     .banner,
     .game-info-container-reverse{
@@ -314,7 +409,7 @@ nav li a{
     .about-us-content, .game-info, .game-info-reverse{
         text-align: center;
     }
-    .game-info-img > img{
+    .game-info-img > img, .career-img > img{
         width: 95%;
         padding-left: 40px;
     }
@@ -336,8 +431,51 @@ nav li a{
         left: -5px;
         bottom: 130px;
     }
+    .careers-container{
+        position: static;
+    }
+    .career-info{
+        padding: 15px;
+        gap:120px;
+    }
+    #nav-normal, 
+    #nav-social, 
+    #nav-normal-bottom{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
     
 }
 @media screen and (min-width: 576px) and (max-width: 960px) {
-    
+    .header-logo-container, 
+    .nav-normal, 
+    nav > ul,
+    .about-us,
+    .videos,
+    .game-info-container,
+    .career-info{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner,
+    .game-info-container-reverse{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
+    .banner-container{
+        background: url('../images/banner-back.svg'), url('../images/banner-back.svg');
+        background-repeat: no-repeat;
+        background-position: left bottom, 30px bottom ;
+        background-size: 60%;
+        text-align: center;
+    }
+    .banner-img > img{
+        width: 100%;
+    }
 }
